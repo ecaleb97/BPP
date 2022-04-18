@@ -10,3 +10,14 @@ def get_maximo(lista):
 elem_maximos = list(map(get_maximo, m))
 
 print('Los elementos mayores son: ', elem_maximos)
+
+def es_primo(n):
+    primo = True
+    for i in range(2, n):
+        if n % i == 0:
+            primo = False
+    return primo
+
+num_primos = list(filter(es_primo, elem_maximos))
+
+print('Los primos son: ', num_primos)
